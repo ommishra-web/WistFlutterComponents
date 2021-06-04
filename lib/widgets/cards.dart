@@ -181,7 +181,7 @@ class MultiColorCard extends StatelessWidget {
                   height: deviceHeight * 0.2,
                   child: InkWell(
                     onTap: () {},
-                    child: Text(cardTitle,
+                    child: Text("some text",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
