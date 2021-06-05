@@ -194,6 +194,11 @@ class MultiColorCard extends StatelessWidget {
 }
 
 class FullBackgroundCard extends StatelessWidget {
+
+  final String backgroundImage;
+
+  const FullBackgroundCard({Key? key, required this.backgroundImage});
+
   @override
   Widget build(BuildContext context) {
     double deviceHeight = MediaQuery.of(context).size.height;
@@ -215,7 +220,7 @@ class FullBackgroundCard extends StatelessWidget {
                 height: deviceHeight * 0.3,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/bg2.jpg"),
+                    image: AssetImage(backgroundImage),
                     fit: BoxFit.fill,
                     alignment: Alignment.center,
                   ),
