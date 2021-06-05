@@ -203,39 +203,36 @@ class FullBackgroundCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
-      child: Padding(
-        padding: const EdgeInsets.all(1.0),
-        child: Card(
-          clipBehavior: Clip.antiAlias,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          color: Colors.grey[200],
-          elevation: 20,
-          shadowColor: Colors.black,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                height:cardHeight,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(backgroundImage),
-                    fit: BoxFit.fill,
-                    alignment: Alignment.center,
-                  ),
-                ),
-                child: Center(
-                  child: Text("Full Backgroung Card",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      )),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        color: Colors.grey[200],
+        elevation: 20,
+        shadowColor: Colors.black,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              height:cardHeight,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(backgroundImage),
+                  fit: BoxFit.fill,
+                  alignment: Alignment.center,
                 ),
               ),
-            ],
-          ),
+              child: Center(
+                child: Text("Full Backgroung Card",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+            ),
+          ],
         ),
       ),
     );
