@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 50),
               MultiColorCard(),
               SizedBox(height: 50),
-              FullBackgroundCard(backgroundImage: "assets/bg2.jpg",),
+              FullBackgroundCard(backgroundImage: "assets/bg2.jpg", cardHeight: 50.0,),
               SizedBox(height: 50),
               FlipCard(),
               SizedBox(height: 50),

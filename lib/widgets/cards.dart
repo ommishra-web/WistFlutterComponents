@@ -196,8 +196,8 @@ class MultiColorCard extends StatelessWidget {
 class FullBackgroundCard extends StatelessWidget {
 
   final String backgroundImage;
-
-  const FullBackgroundCard({Key? key, required this.backgroundImage});
+  final cardHeight;
+  const FullBackgroundCard({Key? key, required this.backgroundImage, this.cardHeight});
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +217,7 @@ class FullBackgroundCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                height: deviceHeight * 0.3,
+                height:cardHeight,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(backgroundImage),
