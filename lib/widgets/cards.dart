@@ -204,7 +204,7 @@ class FullBackgroundCard extends StatelessWidget {
     double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(1.0),
         child: Card(
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(
