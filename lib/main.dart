@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:themetesting/constants/Theme.dart';
 import 'widgets/cards.dart';
 import 'widgets/buttons.dart';
 
@@ -38,6 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
@@ -69,9 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               SizedBox(height: 100),
               ProfileCard(
-                  name: "Hariom Mishra",
-                  cardDescription: "Ceo/Founder",
-                  cardColor: Colors.white),
+                name: "Hariom Mishra",
+                cardDescription: "Ceo/Founder",
+                cardColor: Colors.white,
+                image: "assets/dp.jpg",
+              ),
               SizedBox(height: 50),
               BlogCard(
                 cardTitle: "BlogCard",
@@ -81,9 +86,83 @@ class _MyHomePageState extends State<MyHomePage> {
                 blogImage: 'assets/bg3.jpg',
               ),
               SizedBox(height: 50),
-              MultiColorCard(),
+              BGInfoCard(
+                  beginningAlignment: Alignment.center,
+                  endingAlignment: Alignment.bottomRight,
+                  color1: WishColors.primary,
+                  color2: WishColors.white,
+                  tileMode: TileMode.clamp,
+                  cardHeight: deviceHeight * 0.2,
+                  child: Text("hii")),
+              BGInfoCard(
+                  beginningAlignment: Alignment.center,
+                  endingAlignment: Alignment.centerRight,
+                  color1: Colors.greenAccent,
+                  color2: WishColors.white,
+                  tileMode: TileMode.clamp,
+                  cardHeight: deviceHeight * 0.2,
+                  child: Text("hii")),
+              BGInfoCard(
+                  beginningAlignment: Alignment.center,
+                  endingAlignment: Alignment.centerRight,
+                  color1: Colors.greenAccent,
+                  color2: WishColors.black,
+                  tileMode: TileMode.clamp,
+                  cardHeight: deviceHeight * 0.2,
+                  child: Text("hii")),
+              BGInfoCard(
+                  beginningAlignment: Alignment.center,
+                  endingAlignment: Alignment.bottomRight,
+                  color1: Colors.redAccent,
+                  color2: WishColors.black,
+                  tileMode: TileMode.mirror,
+                  cardHeight: deviceHeight * 0.2,
+                  child: Text("hii")),
+              BGInfoCard(
+                  beginningAlignment: Alignment.center,
+                  endingAlignment: Alignment.bottomRight,
+                  color1: Colors.cyanAccent,
+                  color2: WishColors.black,
+                  tileMode: TileMode.mirror,
+                  cardHeight: deviceHeight * 0.2,
+                  child: Text("hii")),
+              BGInfoCard(
+                  beginningAlignment: Alignment.center,
+                  endingAlignment: Alignment.bottomRight,
+                  color1: Colors.limeAccent,
+                  color2: WishColors.black,
+                  tileMode: TileMode.mirror,
+                  cardHeight: deviceHeight * 0.2,
+                  child: Text("hii")),
+              BGInfoCardPrimary(
+              title: "Title",
+                subtitle: "Subtitle",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              ),
+              BGInfoCardDanger(
+                title: "Title",
+                subtitle: "Subtitle",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              ),
+              BGInfoCardSucces(
+                title: "Title",
+                subtitle: "Subtitle",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              ),
+              BGInfoCardWarning(
+                title: "Title",
+                subtitle: "Subtitle",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              ),
               SizedBox(height: 50),
-              FullBackgroundCard(backgroundImage: "assets/bg2.jpg", cardHeight: 50.0,),
+              FullBackgroundCard(
+                backgroundImage: "assets/bg2.jpg",
+                cardHeight: deviceHeight * 0.2,
+              ),
               SizedBox(height: 50),
               FlipCard(),
               SizedBox(height: 50),
