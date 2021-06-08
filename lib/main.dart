@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:themetesting/constants/Theme.dart';
 import 'widgets/cards.dart';
 import 'widgets/buttons.dart';
-
+import 'widgets/navbar.dart';
 void main() {
   runApp(MyApp());
 }
@@ -39,7 +38,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
@@ -66,7 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
               DefaultButton(
                 onPressed: _incrementCounter,
               ),
-              CircularButton(radius: 20.0, onPressed: _incrementCounter),
+              CircularButton(radius: 20.0, onPressed:() {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => SlimyCardDemo()),
+            // );
+          },),
               IconicButton(
                 size: 10.0,
               ),
@@ -86,54 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 blogImage: 'assets/bg3.jpg',
               ),
               SizedBox(height: 50),
-              BGInfoCard(
-                  beginningAlignment: Alignment.center,
-                  endingAlignment: Alignment.bottomRight,
-                  color1: WishColors.primary,
-                  color2: WishColors.white,
-                  tileMode: TileMode.clamp,
-                  cardHeight: deviceHeight * 0.2,
-                  child: Text("hii")),
-              BGInfoCard(
-                  beginningAlignment: Alignment.center,
-                  endingAlignment: Alignment.centerRight,
-                  color1: Colors.greenAccent,
-                  color2: WishColors.white,
-                  tileMode: TileMode.clamp,
-                  cardHeight: deviceHeight * 0.2,
-                  child: Text("hii")),
-              BGInfoCard(
-                  beginningAlignment: Alignment.center,
-                  endingAlignment: Alignment.centerRight,
-                  color1: Colors.greenAccent,
-                  color2: WishColors.black,
-                  tileMode: TileMode.clamp,
-                  cardHeight: deviceHeight * 0.2,
-                  child: Text("hii")),
-              BGInfoCard(
-                  beginningAlignment: Alignment.center,
-                  endingAlignment: Alignment.bottomRight,
-                  color1: Colors.redAccent,
-                  color2: WishColors.black,
-                  tileMode: TileMode.mirror,
-                  cardHeight: deviceHeight * 0.2,
-                  child: Text("hii")),
-              BGInfoCard(
-                  beginningAlignment: Alignment.center,
-                  endingAlignment: Alignment.bottomRight,
-                  color1: Colors.cyanAccent,
-                  color2: WishColors.black,
-                  tileMode: TileMode.mirror,
-                  cardHeight: deviceHeight * 0.2,
-                  child: Text("hii")),
-              BGInfoCard(
-                  beginningAlignment: Alignment.center,
-                  endingAlignment: Alignment.bottomRight,
-                  color1: Colors.limeAccent,
-                  color2: WishColors.black,
-                  tileMode: TileMode.mirror,
-                  cardHeight: deviceHeight * 0.2,
-                  child: Text("hii")),
               BGInfoCardPrimary(
               title: "Title",
                 subtitle: "Subtitle",
@@ -164,8 +119,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 cardHeight: deviceHeight * 0.2,
               ),
               SizedBox(height: 50),
+    
               FlipCard(),
               SizedBox(height: 50),
+              NavTab(),
+
             ],
           ),
         ),

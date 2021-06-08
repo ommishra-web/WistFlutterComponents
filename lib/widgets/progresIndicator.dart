@@ -4,8 +4,6 @@ import 'package:percent_indicator/percent_indicator.dart';
 class Progresindicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = MediaQuery.of(context).size.width;
     return Container(
         child: CircularPercentIndicator(
       radius: 150.0,

@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:themetesting/constants/Theme.dart';
 import 'progresIndicator.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -156,59 +154,6 @@ class BlogCard extends StatelessWidget {
   }
 }
 
-class BGInfoCard extends StatelessWidget {
-  final beginningAlignment;
-  final endingAlignment;
-  final cardHeight;
-  final cardWidth;
-  final color1;
-  final color2;
-  final tileMode;
-  final Widget child;
-
-  BGInfoCard(
-      {this.beginningAlignment,
-      this.endingAlignment,
-      this.color1,
-      this.color2,
-      this.tileMode,
-      this.cardHeight,
-      this.cardWidth,
-      required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Card(
-          shadowColor: Colors.black,
-          clipBehavior: Clip.antiAlias,
-          elevation: 20,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [color1, color2],
-                  tileMode: tileMode,
-                  begin: beginningAlignment,
-                  end: endingAlignment,
-                ),
-              ),
-              child: Container(
-                  alignment: Alignment.center,
-                  height: cardHeight,
-                  child: InkWell(onTap: () {}, child: child))),
-        ),
-      ),
-    );
-  }
-}
-
 class BGInfoCardPrimary extends StatelessWidget {
   final title;
   final subtitle;
@@ -217,7 +162,6 @@ class BGInfoCardPrimary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -277,7 +221,6 @@ class BGInfoCardDanger extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -337,7 +280,6 @@ class BGInfoCardSucces extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -397,7 +339,6 @@ class BGInfoCardWarning extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -457,7 +398,6 @@ class FullBackgroundCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
       child: Card(
         clipBehavior: Clip.antiAlias,
@@ -516,7 +456,6 @@ class _FlipCardState extends State<FlipCard> {
   @override
   Widget build(BuildContext context) {
     double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = MediaQuery.of(context).size.width;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -634,3 +573,5 @@ class _FlipCardState extends State<FlipCard> {
     );
   }
 }
+
+

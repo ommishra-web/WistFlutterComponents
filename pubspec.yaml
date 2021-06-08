@@ -22,7 +22,6 @@ environment:
 
 dependencies:
   percent_indicator: any
-  curved_navigation_bar: any
   flutter:
     sdk: flutter
 

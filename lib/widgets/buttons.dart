@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:themetesting/constants/Theme.dart';
 
+
 class DefaultButton extends StatelessWidget {
   DefaultButton({required this.onPressed});
   final GestureTapCallback onPressed;
@@ -51,7 +52,6 @@ class IconicButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
     return Container(
       alignment: Alignment.center,
       child: Padding(
